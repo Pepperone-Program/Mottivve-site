@@ -39,15 +39,15 @@ function Footer() {
                 <div className="w-full xs:w-1/2 md:w-1/4 px-4 mb-8">
                   <h5 className="text-xl font-semibold mb-6">Contato</h5>
                   <ul>
-                    <li className="mb-6"><a className="inline-block text-lg text-gray-600 hover:text-gray-900" href="#">Suporte</a></li>
-                    <li className="mb-6"><a className="inline-block text-lg text-gray-600 hover:text-gray-900" href="#">Help Center</a></li>
+                    <li className="mb-6"><a className="inline-block text-lg text-gray-600 hover:text-gray-900" href="/contact">Suporte</a></li>
+                    <li className="mb-6"><a className="inline-block text-lg text-gray-600 hover:text-gray-900" href="/contact">Help Center</a></li>
                   </ul>
                 </div>
                 <div className="w-full xs:w-1/2 md:w-1/4 px-4 mb-8">
                   <h5 className="text-xl font-semibold mb-6">Legal</h5>
                   <ul>
-                    <li className="mb-6"><a className="inline-block text-lg text-gray-600 hover:text-gray-900" href="#">Termos de uso</a></li>
-                    <li className="mb-6"><a className="inline-block text-lg text-gray-600 hover:text-gray-900" href="#">Política de privacidade</a></li>
+                    <li className="mb-6"><a className="inline-block text-lg text-gray-600 hover:text-gray-900" href="/terms">Termos de uso</a></li>
+                    <li className="mb-6"><a className="inline-block text-lg text-gray-600 hover:text-gray-900" href="/policies">Política de privacidade</a></li>
                   </ul>
                 </div>
               </div>
@@ -56,6 +56,7 @@ function Footer() {
               <div className="flex flex-wrap items-center -mx-4">
                 <div className="w-full lg:w-1/3 px-4">
                   <Image
+                    onClick={() => window.location.href='/'}
                     src="/images/MOTTIVVE_LOGOMARCA_01.png"
                     alt="Mottivve logo"
                     width={150}
