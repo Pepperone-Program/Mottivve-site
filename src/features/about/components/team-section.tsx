@@ -19,7 +19,7 @@ const TeamSection: React.FC = () => {
           height={200}
         />
         <div className="relative container px-4 mx-auto">
-          <h1 className="font-heading tracking-tight text-4xl sm:text-5xl font-bold mb-4">Meet our team</h1>
+          <h2 className="font-heading tracking-tight text-4xl sm:text-5xl font-bold mb-4">Meet our team</h2>
           <p className="text-lg text-gray-600 mb-20">Our team has led and delivered large-scale software and design projects in multiple startups.</p>
           <div className="flex items-center justify-center">
             <div className="text-gray-600">Loading team...</div>

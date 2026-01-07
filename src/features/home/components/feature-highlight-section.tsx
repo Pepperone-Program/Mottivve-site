@@ -82,7 +82,7 @@ const FeatureHighlightSection: React.FC = () => {
                 <Image
                   className="block rounded-4xl"
                   src="/images/catalogo_badboy.png"
-                  alt="Auto-tagging feature illustration"
+                  alt="Catalogo de produtos"
                   width={600}
                   height={400}
                 />

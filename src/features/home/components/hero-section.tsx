@@ -10,7 +10,7 @@ const HeroSection: React.FC = () => {
         <Image
           className="absolute top-0 left-0 w-full h-full object-cover "
           src="/images/headers-bg-gray-platee.png"
-          alt=""
+          alt="Logo Mottivve"
           fill
           priority
         />
@@ -40,7 +40,7 @@ const HeroSection: React.FC = () => {
       <Image
         className="relative block mx-auto px-12 lg:px-8 -mt-40 md:-mt-64 rounded-4xl"
         src="/images/templateMottivve.png"
-        alt="Catalogo de produtos do nosso site."
+        alt="Página de checkout do nosso site."
         width={800}
         height={600}
         priority

@@ -20,9 +20,9 @@ const BlogHeroSection: React.FC<BlogHeroSectionProps> = ({ onCategoryChange }) =
       <section className="relative py-12 md:py-24">
         <div className="container px-4 mx-auto">
           <div className="text-center border-b border-gray-200 mb-8">
-            <h1 className="font-heading tracking-tight text-4xl sm:text-5xl lg:text-6xl font-bold mb-24">
+            <h2 className="font-heading tracking-tight text-4xl sm:text-5xl lg:text-6xl font-bold mb-24">
               Blog & Articles
-            </h1>
+            </h2>
             <div className="flex items-center justify-center pb-16">
               <div className="text-gray-500">Loading categories...</div>
             </div>

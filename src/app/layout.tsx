@@ -27,7 +27,6 @@ const siteUrl =
     ""
   );
 
-// 🔥 Title agora com tamanho recomendado (50–60 chars aprox.)
 const defaultTitle = "Mottivve | Revendedor Oficial Bad Boy no Brasil";
 
 const siteDescription =
@@ -89,12 +88,11 @@ export const metadata = {
     "loja online",
   ],
 
-  // ✅ Canonical e hreflang
   alternates: {
     canonical: "/",
     languages: {
       "pt-BR": "/",
-      pt: "/", // opcional (ajuda auditorias)
+      pt: "/", 
     },
   },
 
@@ -162,12 +160,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // ✅ Lista social sem inventar links
   const sameAs = [instagramUrl, facebookUrl, xUrl, linkedinUrl, youtubeUrl].filter(
     Boolean
   );
 
-  // ✅ JSON-LD melhorado
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [

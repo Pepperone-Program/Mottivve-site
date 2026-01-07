@@ -103,9 +103,9 @@ export default function BlogSinglePage({ params }: BlogSinglePageProps) {
             )}
 
             {/* Title */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               {post.title}
-            </h1>
+            </h2>
 
             {/* Meta Info */}
             <div className="flex items-center gap-6 text-gray-600 mb-8">
