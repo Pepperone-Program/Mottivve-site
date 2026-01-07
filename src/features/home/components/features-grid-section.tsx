@@ -6,8 +6,8 @@ const FeaturesGridSection: React.FC = () => {
         <div>
           <div className="max-w-2xl mx-auto mb-24 text-center">
             <h1 className="font-heading tracking-tight text-4xl sm:text-5xl font-bold mb-4" >Compre tudo que quiser de forma fácil</h1>
-            <p className="text-gray-500">Com a Mottivve, você tem tudo que quiser com a qualidade de sempre.</p>
-            <p className="text-gray-500">Compre, pague e receba onde quiser em um instante.</p>
+            <p className="text-gray-600">Com a Mottivve, você tem tudo que quiser com a qualidade de sempre.</p>
+            <p className="text-gray-600">Compre, pague e receba onde quiser em um instante.</p>
           </div>
           <div className="flex flex-wrap -mx-4 -mb-16">
             <div className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-16">
@@ -17,7 +17,7 @@ const FeaturesGridSection: React.FC = () => {
                 </div>
                 <div className="mt-3">
                   <h5 className="text-xl font-bold mb-1">Bolsas & Mochilas</h5>
-                  <p className="text-lg text-gray-500">Leve tudo que precisa para todos os lugares</p>
+                  <p className="text-lg text-gray-600">Leve tudo que precisa para todos os lugares</p>
                 </div>
               </div>
             </div>
@@ -28,7 +28,7 @@ const FeaturesGridSection: React.FC = () => {
                 </div>
                 <div className="mt-3">
                   <h5 className="text-xl font-bold mb-1">Agasalhos & Moletons</h5>
-                  <p className="text-lg text-gray-500">Sempre preparado para qualquer ocasião</p>
+                  <p className="text-lg text-gray-600">Sempre preparado para qualquer ocasião</p>
                 </div>
               </div>
             </div>
@@ -39,7 +39,7 @@ const FeaturesGridSection: React.FC = () => {
                 </div>
                 <div className="mt-3">
                   <h5 className="text-xl font-bold mb-1">Camisetas</h5>
-                  <p className="text-lg text-gray-500">Cortes que te valorizam.</p>
+                  <p className="text-lg text-gray-600">Cortes que te valorizam.</p>
                 </div>
               </div>
             </div>
@@ -50,7 +50,7 @@ const FeaturesGridSection: React.FC = () => {
                 </div>
                 <div className="mt-3">
                   <h5 className="text-xl font-bold mb-1">Equipamentos</h5>
-                  <p className="text-lg text-gray-500">Material certo para quem leva a sério.</p>
+                  <p className="text-lg text-gray-600">Material certo para quem leva a sério.</p>
                 </div>
               </div>
             </div>
@@ -61,7 +61,7 @@ const FeaturesGridSection: React.FC = () => {
                 </div>
                 <div className="mt-3">
                   <h5 className="text-xl font-bold mb-1">Linha Luta (MMA, Jiu-Jitsu, Fightwear)</h5>
-                  <p className="text-lg text-gray-500">Atitude que se sente no movimento.</p>
+                  <p className="text-lg text-gray-600">Atitude que se sente no movimento.</p>
                 </div>
               </div>
             </div>
@@ -72,7 +72,7 @@ const FeaturesGridSection: React.FC = () => {
                 </div>
                 <div className="mt-3">
                   <h5 className="text-xl font-bold mb-1">Lifestyle & Performance</h5>
-                  <p className="text-lg text-gray-500">Para quem vive em movimento.</p>
+                  <p className="text-lg text-gray-600">Para quem vive em movimento.</p>
                 </div>
               </div>
             </div>

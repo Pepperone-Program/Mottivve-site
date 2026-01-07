@@ -131,7 +131,6 @@ function RegisterFormSection(): React.ReactElement {
 
         <Button
           type="submit"
-          variant="primary"
           fullWidth
           loading={loading}
           disabled={loading}

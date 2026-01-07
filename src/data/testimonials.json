@@ -1,26 +1,82 @@
 [
   {
     "id": 1,
-    "logoSrc": "/images/logo-clouds-logo-ipsum-6.svg",
-    "quote": "We use the app daily and we're very happy that they are created this amazing bookmarking platform.",
-    "avatarSrc": "/images/blog-avatar-medium.png",
-    "name": "Ethan Rauf",
-    "title": "Founder of AIME Inc."
+    "logoSrc": "/images/logo-clouds/logo-ipsum-6.svg",
+    "quote": "Qualidade acima da média. Dá pra sentir que é um produto feito pra durar, mesmo usando todos os dias.",
+    "avatarSrc": "/frequencii-assets/blog/avatar-medium.png",
+    "name": "Lucas Andrade",
+    "title": "Cliente verificado"
   },
   {
     "id": 2,
-    "logoSrc": "/images/logo-clouds-logo-ipsum-1.svg",
-    "quote": "We use the app daily and we're very happy that they are created this amazing bookmarking platform.",
-    "avatarSrc": "/images/blog-avatar-medium.png",
-    "name": "Hanna Stanton",
-    "title": "Founder of AIME Inc."
+    "logoSrc": "/images/logo-clouds/logo-ipsum-1.svg",
+    "quote": "Conforto e presença definem bem. Uso na rotina e em momentos mais ativos, e funciona perfeitamente.",
+    "avatarSrc": "/frequencii-assets/blog/avatar-medium.png",
+    "name": "Mariana Costa",
+    "title": "Compradora recorrente"
   },
   {
     "id": 3,
-    "logoSrc": "/images/logo-clouds-logo-ipsum-2.svg",
-    "quote": "We use the app daily and we're very happy that they are created this amazing bookmarking platform.",
-    "avatarSrc": "/images/blog-avatar-medium.png",
-    "name": "Cooper Levin",
-    "title": "Founder of AIME Inc."
+    "logoSrc": "/images/logo-clouds/logo-ipsum-2.svg",
+    "quote": "Já tive produtos de várias marcas, mas a diferença aqui é a sensação de confiança quando você veste.",
+    "avatarSrc": "/frequencii-assets/blog/avatar-medium.png",
+    "name": "Rafael Mendes",
+    "title": "Cliente Mottivve"
+  },
+  {
+    "id": 4,
+    "logoSrc": "/images/logo-clouds/logo-ipsum-3.svg",
+    "quote": "Entrega rápida, acabamento impecável e caimento excelente. Superou minhas expectativas.",
+    "avatarSrc": "/frequencii-assets/blog/avatar-medium.png",
+    "name": "Camila Rocha",
+    "title": "Cliente online"
+  },
+  {
+    "id": 5,
+    "logoSrc": "/images/logo-clouds/logo-ipsum-4.svg",
+    "quote": "Estilo forte sem exagero. Combina com o dia a dia e com momentos mais intensos.",
+    "avatarSrc": "/frequencii-assets/blog/avatar-medium.png",
+    "name": "Bruno Almeida",
+    "title": "Cliente verificado"
+  },
+  {
+    "id": 6,
+    "logoSrc": "/images/logo-clouds/logo-ipsum-5.svg",
+    "quote": "A Bad Boy realmente mantém o padrão que todo mundo comenta. Dá pra entender por que a marca é tão respeitada.",
+    "avatarSrc": "/frequencii-assets/blog/avatar-medium.png",
+    "name": "Felipe Nogueira",
+    "title": "Comprador frequente"
+  },
+  {
+    "id": 7,
+    "logoSrc": "/frequencii-assets/logo-clouds/logo-ipsum-7.svg",
+    "quote": "Produto resistente, bem construído e confortável. Dá pra perceber o cuidado nos detalhes.",
+    "avatarSrc": "/frequencii-assets/blog/avatar-medium.png",
+    "name": "Ana Paula Silva",
+    "title": "Cliente satisfeita"
+  },
+  {
+    "id": 8,
+    "logoSrc": "/images/logo-clouds/logo-ipsum-8.svg",
+    "quote": "Uso com frequência e continua como novo. Vale cada centavo investido.",
+    "avatarSrc": "/frequencii-assets/avatar-medium.png",
+    "name": "Diego Ferreira",
+    "title": "Cliente Mottivve"
+  },
+  {
+    "id": 9,
+    "logoSrc": "/images/logo-clouds/logo-ipsum-9.svg",
+    "quote": "Escolhi pela marca, mas fiquei pela qualidade e pelo conforto no dia a dia.",
+    "avatarSrc": "/frequencii-assets/blog/avatar-medium.png",
+    "name": "Juliana Pires",
+    "title": "Compradora online"
+  },
+  {
+    "id": 10,
+    "logoSrc": "/images/logo-clouds/logo-ipsum-10.svg",
+    "quote": "Bad Boy é sinônimo de atitude. Produto firme, bonito e com excelente durabilidade.",
+    "avatarSrc": "/images/team-avatar-gray-2.png",
+    "name": "Thiago Martins",
+    "title": "Cliente verificado"
   }
 ]

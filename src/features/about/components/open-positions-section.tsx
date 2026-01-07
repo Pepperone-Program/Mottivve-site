@@ -24,9 +24,9 @@ const OpenPositionsSection: React.FC = () => {
             <div className="flex items-center mb-4">
               <h3 className="font-heading mr-2 text-4xl font-bold text-gray-900">Open Positions</h3>
             </div>
-            <p className="text-lg text-gray-500 mb-16">We believe that the freedom to work remotely allows for deeper and more meaningful work.</p>
+            <p className="text-lg text-gray-600 mb-16">We believe that the freedom to work remotely allows for deeper and more meaningful work.</p>
             <div className="flex items-center justify-center">
-              <div className="text-gray-500">Loading positions...</div>
+              <div className="text-gray-600">Loading positions...</div>
             </div>
           </div>
         </div>

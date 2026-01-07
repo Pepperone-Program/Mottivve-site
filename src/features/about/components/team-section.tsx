@@ -20,9 +20,9 @@ const TeamSection: React.FC = () => {
         />
         <div className="relative container px-4 mx-auto">
           <h1 className="font-heading tracking-tight text-4xl sm:text-5xl font-bold mb-4">Meet our team</h1>
-          <p className="text-lg text-gray-500 mb-20">Our team has led and delivered large-scale software and design projects in multiple startups.</p>
+          <p className="text-lg text-gray-600 mb-20">Our team has led and delivered large-scale software and design projects in multiple startups.</p>
           <div className="flex items-center justify-center">
-            <div className="text-gray-500">Loading team...</div>
+            <div className="text-gray-600">Loading team...</div>
           </div>
         </div>
       </section>
@@ -40,7 +40,7 @@ const TeamSection: React.FC = () => {
       />
       <div className="relative container px-4 mx-auto">
         <h1 className="font-heading tracking-tight text-4xl sm:text-5xl font-bold mb-4">Meet our team</h1>
-        <p className="text-lg text-gray-500 mb-20">Our team has led and delivered large-scale software and design projects in multiple startups.</p>
+        <p className="text-lg text-gray-600 mb-20">Our team has led and delivered large-scale software and design projects in multiple startups.</p>
         <div className="flex flex-wrap -mx-4 -mb-8">
           {(team as TeamMember[]).map((member, index) => (
             <div key={index} className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 px-4 mb-8">

@@ -1,44 +1,31 @@
-/**
- * Application configuration
- * Simple template config following bulletproof-react principles
- */
+
 export const appConfig = {
-  name: 'Frequencii',
-  description: 'Modern web template for digital solutions',
+  name: 'Mottivve',
+  description: 'Site oficial da Mottivve',
   version: '1.0.0',
 
-  // Social media links
-  social: {
-    twitter: 'https://twitter.com/frequencii',
-    linkedin: 'https://linkedin.com/company/frequencii',
-    github: 'https://github.com/frequencii',
-  },
-
-  // Contact information
   contact: {
-    email: 'support@frequencii.com',
-    phone: '1-800-FREQ-APP',
+    email: 'derickcampossantos1@gmail.com',
+    phone: '+55 11 986261007',
   },
 
   // Navigation items
   navigation: {
     main: [
-      { name: 'About', href: '/about' },
-      { name: 'Pricing', href: '/pricing' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Contact', href: '/contact' },
+      { name: 'Sobre', href: '/about' },
+      { name: 'Loja', href: 'https://mottivve.lojavirtualnuvem.com.br/' },
+      { name: 'Contato', href: '/contact' },
     ],
     auth: [
-      { name: 'Login', href: '/login' },
-      { name: 'Get Started', href: '/register' },
+      { name: 'Login', href: 'https://mottivve.lojavirtualnuvem.com.br/account/login/' },
+      { name: 'Iniciar', href: 'https://mottivve.lojavirtualnuvem.com.br/' },
     ],
   },
 
-  // Branding
   branding: {
-    logo: '/images/brand.svg',
-    logoAlt: 'Frequencii logo',
-    favicon: '/favicon.png',
+    logo: '/images/MOTTIVVE_LOGOMARCA_01.png',
+    logoAlt: 'Mottivve logo',
+    favicon: '/images/MOTTIVVE_LOGOMARCA_01.png',
   },
 };
 

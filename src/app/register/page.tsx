@@ -54,7 +54,7 @@ export default function RegisterPage() {
               <div className="text-center">
                 <p className="text-sm">
                   <span className="mr-1 text-gray-500">Already have an account?</span>
-                  <Link className="inline-block text-teal-500 hover:text-yellowGreen-600 font-semibold" href="/login">Login</Link>
+                  <Link className="inline-block text-teal-500 hover:text-yellowGreen-600 font-semibold" href="https://mottivve.lojavirtualnuvem.com.br/account/login/">Login</Link>
                 </p>
               </div>
             </div>

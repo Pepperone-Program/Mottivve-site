@@ -8,13 +8,13 @@ import CTASection from '@/components/ui/cta-section';
 
 export default function HomePage() {
   const seoData = {
-    description: 'Frequencii helps marketing teams easily store, organize, and access valuable assets from anywhere. Streamline your marketing workflow today.',
-    keywords: ['marketing assets', 'asset management', 'marketing tools', 'digital assets', 'marketing workflow']
+    description: 'Mottivve eleva sua presença, com qualidade.',
+    keywords: ['mottivve', 'motive', 'roupas', 'bad boy', 'badboy', 'mochilas', 'qualidade']
   };
 
   return (
     <PageContainer
-      title="Frequencii - Marketing Asset Management at Your Fingertips"
+      title="Mottivve"
       seo={seoData}
     >
       <section className="relative pb-24">

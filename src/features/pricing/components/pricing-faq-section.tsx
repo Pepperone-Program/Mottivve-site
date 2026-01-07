@@ -15,9 +15,9 @@ const PricingFAQSection: React.FC = () => {
       <div className="container px-4 mx-auto">
         <div className="text-center mb-20">
           <h1 className="font-heading tracking-tight text-4xl sm:text-5xl font-semibold mb-6">
-            Frequently asked questions
+            Perguntas frequentes
           </h1>
-          <p className="text-gray-500">Everything you need to know about the product.</p>
+          <p className="text-gray-500">Tudo que você precisa saber sobre a mottivve.</p>
         </div>
         <div className="flex flex-wrap -mx-4 lg:-mx-12 -mb-16">
           {(faqs as FAQ[]).map((faq, index) => (

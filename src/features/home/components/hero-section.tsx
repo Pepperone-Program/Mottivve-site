@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
     <section className="container px-4 mx-auto" role="banner">
       <div className="relative py-16 pb-40 md:pb-72 px-2 xs:px-8 rounded-3xl overflow-hidden">
         <Image
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover "
           src="/images/headers-bg-gray-platee.png"
           alt=""
           fill
@@ -28,9 +28,9 @@ const HeroSection: React.FC = () => {
             {/* CTA Button */}
             <Button
               onClick={() => window.location.href='https://mottivve.lojavirtualnuvem.com.br'}
-              aria-label="Get started with Frequencii"
+              aria-label="Conheça agora mesmo nossa loja!"
             >
-              Conheça agora!
+              Explorar a coleção
             </Button>
           </div>
         </div>
@@ -38,9 +38,9 @@ const HeroSection: React.FC = () => {
 
       {/* Feature image */}
       <Image
-        className="relative block mx-auto px-12 lg:px-8 -mt-40 md:-mt-64"
-        src="/images/headers-header-2-center.png"
-        alt="Frequencii dashboard showing marketing asset organization and management interface"
+        className="relative block mx-auto px-12 lg:px-8 -mt-40 md:-mt-64 rounded-4xl"
+        src="/images/templateMottivve.png"
+        alt="Catalogo de produtos do nosso site."
         width={800}
         height={600}
         priority

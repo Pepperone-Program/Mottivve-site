@@ -33,7 +33,7 @@ const Header = memo(() => {
   const getRouteByName = (name: string): Route => {
     const routes: Record<string, Route> = {
       'home': '/' as Route,
-      'login': '/login' as Route,
+      'login': 'https://mottivve.lojavirtualnuvem.com.br/account/login/' as Route,
       'register': '/register' as Route
     };
     return routes[name] || ('/' as Route);
@@ -44,8 +44,7 @@ const Header = memo(() => {
     return [
       { to: '/' as Route, label: 'Home' },
       { to: '/about' as Route, label: 'Sobre' },
-      { to: '/pricing' as Route, label: 'Loja' },
-      { to: '/blog' as Route, label: 'Blog' },
+      { to: 'https://mottivve.lojavirtualnuvem.com.br' as Route, label: 'Loja' },
       { to: '/contact' as Route, label: 'Contato' }
     ];
   };
@@ -58,11 +57,11 @@ const Header = memo(() => {
         <div className="container mx-auto px-4">
           <div className="relative flex h-24 items-center">
             {/* Logo */}
-            <Link className="inline-block" href={getRouteByName('home')} aria-label="Frequencii - Home">
+            <Link className="inline-block" href={getRouteByName('home')} aria-label="Mottivve - Home">
               <Image
                 className="h-10"
                 src="/images/MOTTIVVE_LOGOMARCA_01.png"
-                alt="Frequencii logo"
+                alt="Mottivve logo"
                 width={180}
                 height={20}
               />
@@ -70,7 +69,7 @@ const Header = memo(() => {
 
             {/* Mobile menu button */}
             <button
-              className="lg:hidden flex items-center justify-center h-10 w-10 ml-auto bg-gradient-to-b from-cyanGreen-800 to-cyan-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyanGreen-500 focus:ring-offset-2"
+              className="lg:hidden flex items-center justify-center h-10 w-10 ml-auto bg-gradient-to-b from-blue-500 to-blue-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               onClick={toggleMobileMenu}
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-menu"
@@ -107,14 +106,14 @@ const Header = memo(() => {
             {/* Desktop auth buttons */}
             <div className="hidden lg:block ml-auto">
               <Link
-                className="inline-flex items-center justify-center h-10 mr-4 px-4 text-center leading-loose text-sm text-gray-700 hover:text-yellowGreen-700 font-semibold transition duration-200 focus:outline-none focus:underline"
+                className="inline-flex items-center justify-center h-10 mr-4 px-4 text-center leading-loose text-sm text-gray-700 hover:text-blue-500 font-semibold transition duration-200 focus:outline-none focus:underline"
                 href={getRouteByName('login')}
               >
                 Login
               </Link>
               <Button
-                className="inline-flex items-center justify-center h-10 px-4 text-center leading-loose text-sm text-gray-700 hover:text-yellowGreen-700 font-semibold border border-gray-200 hover:border-yellowGreen-600 shadow-sm hover:shadow-none rounded-lg transition duration-200 focus:outline-none focus:ring-2 focus:ring-yellowGreen-500 focus:ring-offset-2"
-                onClick={() => window.location.href='mottivve.lojavirtualnuvem.com.br'}
+                className="inline-flex items-center justify-center h-10 px-4 text-center leading-loose text-sm text-gray-700 hover:text-blue-500 font-semibold border border-gray-200 hover:border-blue-600 shadow-sm hover:shadow-none rounded-lg transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                onClick={() => window.location.href='https://mottivve.lojavirtualnuvem.com.br/'}
               >
                 Acessar loja
               </Button>
@@ -132,7 +131,7 @@ const Header = memo(() => {
         >
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-teal-800 opacity-70"
+            className="fixed inset-0 bg-blue-200 opacity-70"
             onClick={closeMobileMenu}
             aria-hidden="true"
           ></div>
@@ -145,18 +144,18 @@ const Header = memo(() => {
                 className="inline-block mr-auto"
                 href={getRouteByName('home')}
                 onClick={closeMobileMenu}
-                aria-label="Frequencii - Home"
+                aria-label="Mottivve - Home"
               >
                 <Image
                   className="h-10"
-                  src="/images/brand.svg"
-                  alt="Frequencii logo"
-                  width={150}
-                  height={40}
+                  src="/images/MOTTIVVE_LOGOMARCA_01.png"
+                  alt="Mottivve logo"
+                  width={180}
+                  height={20}
                 />
               </Link>
               <button
-                className="p-2 focus:outline-none focus:ring-2 focus:ring-gray-500 rounded"
+                className="p-2 focus:outline-none focus:ring-2 focus:ring-gray-600 rounded"
                 onClick={closeMobileMenu}
                 aria-label="Close mobile menu"
               >
@@ -179,7 +178,7 @@ const Header = memo(() => {
                 {navigationItems.map((item) => (
                   <li key={item.to}>
                     <Link
-                      className={`inline-block text-lg font-medium transition duration-200 focus:outline-none focus:underline ${isActiveRoute(item.to) ? 'text-yellowGreen-700' : 'text-black hover:text-yellowGreen-700'}`}
+                      className={`inline-block text-lg font-medium transition duration-200 focus:outline-none focus:underline ${isActiveRoute(item.to) ? 'text-blue-500' : 'text-black hover:text-blue-500'}`}
                       href={item.to}
                       onClick={closeMobileMenu}
                       aria-current={isActiveRoute(item.to) ? 'page' : undefined}
@@ -194,18 +193,18 @@ const Header = memo(() => {
             {/* Auth buttons */}
             <div className="space-y-4">
               <Link
-                className="flex items-center justify-center h-10 px-4 text-center text-sm text-gray-700 font-semibold border border-gray-200 hover:bg-gray-100 shadow-sm rounded-lg transition duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
-                href={getRouteByName('login')}
+                className="flex items-center justify-center h-10 px-4 text-center text-sm text-gray-800 font-semibold border border-gray-200 hover:bg-gray-100 shadow-sm rounded-lg transition duration-200 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-offset-2"
+                href='https://mottivve.lojavirtualnuvem.com.br/account/login/'
                 onClick={closeMobileMenu}
               >
                 Login
               </Link>
               <Link
-                className="flex items-center justify-center h-10 px-4 text-center text-sm text-white font-semibold border border-yellowGreen-600 bg-yellowGreen-500 hover:bg-yellowGreen-600 rounded-lg transition duration-200 focus:outline-none focus:ring-2 focus:ring-yellowGreen-500 focus:ring-offset-2"
-                href={getRouteByName('register')}
+                className="flex items-center justify-center h-10 px-4 text-center text-sm text-white font-semibold border border-blue-600 bg-blue-500 hover:bg-blue-500 rounded-lg transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                href='https://mottivve.lojavirtualnuvem.com.br'
                 onClick={closeMobileMenu}
               >
-                Get Started
+                Acessar loja
               </Link>
             </div>
           </nav>

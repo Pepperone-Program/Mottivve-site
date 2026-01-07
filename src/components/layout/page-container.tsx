@@ -38,16 +38,15 @@ const PageContainer: React.FC<PageContainerProps> = ({
     } else {
       // Default title based on route
       const routeTitles: Record<string, string> = {
-        '/': 'Frequencii - Marketing Asset Management',
-        '/about': 'About - Frequencii',
-        '/pricing': 'Pricing - Frequencii',
-        '/blog': 'Blog - Frequencii',
-        '/contact': 'Contact - Frequencii',
-        '/login': 'Login - Frequencii',
-        '/register': 'Sign Up - Frequencii'
+        '/': 'Mottivve',
+        '/about': 'Sobre - Mottivve',
+        '/loja': 'loja - Mottivve',
+        '/contact': 'Contact - Mottivve',
+        '/login': 'Login - Mottivve',
+        '/register': 'Sign Up - Mottivve'
       };
 
-      document.title = routeTitles[pathname] || 'Frequencii';
+      document.title = routeTitles[pathname] || 'Mottivve';
     }
   }, [title, pathname]);
 

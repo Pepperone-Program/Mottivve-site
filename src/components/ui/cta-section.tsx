@@ -18,10 +18,9 @@ interface CTASectionProps {
  */
 const CTASection: React.FC<CTASectionProps> = ({
   badge = 'Conheça nosso site',
-  title = 'Ainda não sabe se somos a melhor opção?',
+  title = 'Ainda está em dúvida? Tudo bem.',
   buttonText = 'Visite o site https://mottivve.lojavirtualnuvem.com.br',
   buttonUrl = 'https://mottivve.lojavirtualnuvem.com.br',
-  showArrow = true,
   className = '',
   backgroundImagePath = '/images'
 }) => {
@@ -55,9 +54,14 @@ const CTASection: React.FC<CTASectionProps> = ({
               </span>
             )}
 
-            <h2 className="font-heading tracking-tight text-4xl sm:text-5xl font-bold mb-10">
-              {title}
-            </h2>
+            <div className='mb-10'>
+              <h2 className="font-heading tracking-tight text-4xl sm:text-5xl font-bold mb-2">
+                {title}
+              </h2>
+              <p className='font-heading tracking-tight text-gray-600'>
+                Dá uma olhada na loja e decide no seu tempo.
+              </p>
+            </div>
 
             <Button
               onClick={() => window.location.href=`${buttonUrl}`}

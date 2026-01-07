@@ -39,25 +39,25 @@ function ContactFormSection(): React.ReactElement {
     <form onSubmit={handleSubmit}>
       <div className="flex flex-wrap -mx-4 mb-8 items-center">
         <div className="w-full md:w-1/2 px-4 mb-4">
-          <label className="block mb-1 text-sm font-medium" htmlFor="firstName">First name</label>
+          <label className="block mb-1 text-sm font-medium" htmlFor="firstName">Nome</label>
           <input
-            className="py-2 px-4 h-11 w-full text-gray-500 placeholder-gray-500 bg-gray-50 bg-opacity-40 border border-gray-200 focus:border-yellowGreen-500 rounded-lg outline-none ring ring-transparent focus:ring-yellowGreen-500"
+            className="py-2 px-4 h-11 w-full text-gray-500 placeholder-gray-500 bg-gray-50 bg-opacity-40 border border-gray-200 focus:border-blue-500 rounded-lg outline-none ring ring-transparent focus:ring-blue-500"
             type="text"
             name="firstName"
             id="firstName"
-            placeholder="First name"
+            placeholder="Nome"
             value={formData.firstName}
             onChange={handleInputChange}
           />
         </div>
         <div className="w-full md:w-1/2 px-4 mb-4">
-          <label className="block mb-1 text-sm font-medium" htmlFor="lastName">Last name</label>
+          <label className="block mb-1 text-sm font-medium" htmlFor="lastName">Sobrenome</label>
           <input
-            className="py-2 px-4 h-11 w-full text-gray-500 placeholder-gray-500 bg-gray-50 bg-opacity-40 border border-gray-200 focus:border-yellowGreen-500 rounded-lg outline-none ring ring-transparent focus:ring-yellowGreen-500"
+            className="py-2 px-4 h-11 w-full text-gray-600 placeholder-gray-600 bg-gray-50 bg-opacity-40 border border-gray-200 focus:border-blue-500 rounded-lg outline-none ring ring-transparent focus:ring-blue-500"
             type="text"
             name="lastName"
             id="lastName"
-            placeholder="Last name"
+            placeholder="Sobrenome"
             value={formData.lastName}
             onChange={handleInputChange}
           />
@@ -65,7 +65,7 @@ function ContactFormSection(): React.ReactElement {
         <div className="w-full md:w-1/2 px-4 mb-4">
           <label className="block mb-1 text-sm font-medium" htmlFor="email">Email</label>
           <input
-            className="py-2 px-4 h-11 w-full text-gray-500 placeholder-gray-500 bg-gray-50 bg-opacity-40 border border-gray-200 focus:border-yellowGreen-500 rounded-lg outline-none ring ring-transparent focus:ring-yellowGreen-500"
+            className="py-2 px-4 h-11 w-full text-gray-600 placeholder-gray-600 bg-gray-50 bg-opacity-40 border border-gray-200 focus:border-blue-500 rounded-lg outline-none ring ring-transparent focus:ring-blue-500"
             type="email"
             name="email"
             id="email"
@@ -75,7 +75,7 @@ function ContactFormSection(): React.ReactElement {
           />
         </div>
         <div className="w-full md:w-1/2 px-4 mb-4">
-          <label className="block mb-1 text-sm font-medium" htmlFor="phoneNumber">Phone number</label>
+          <label className="block mb-1 text-sm font-medium" htmlFor="phoneNumber">Telefone</label>
           <div className="flex h-11 bg-gray-50 bg-opacity-40 border border-gray-200 rounded-md">
             <div className="relative">
               <select
@@ -85,9 +85,8 @@ function ContactFormSection(): React.ReactElement {
                 value={formData.phoneCountry}
                 onChange={handleInputChange}
               >
+                <option value="BR">BR</option>
                 <option value="US">US</option>
-                <option value="GB">GB</option>
-                <option value="EU">EU</option>
               </select>
               <div className="absolute top-1/2 right-0 transform -translate-y-1/2">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -96,35 +95,35 @@ function ContactFormSection(): React.ReactElement {
               </div>
             </div>
             <input
-              className="py-2 pl-2 pr-4 h-full text-gray-500 placeholder-gray-500 border-0 bg-transparent focus:outline-none"
+              className="py-2 pl-2 pr-4 h-full text-gray-600 placeholder-gray-600 border-0 bg-transparent focus:outline-none"
               type="text"
               name="phoneNumber"
               id="phoneNumber"
-              placeholder="+1 (555) 000-0000"
+              placeholder="+55 11 95262013607"
               value={formData.phoneNumber}
               onChange={handleInputChange}
             />
           </div>
         </div>
         <div className="w-full px-4">
-          <label className="block mb-1 text-sm font-medium" htmlFor="message">Message</label>
+          <label className="block mb-1 text-sm font-medium" htmlFor="message">Mensagem</label>
           <textarea
-            className="block py-2 px-4 w-full h-44 text-gray-500 placeholder-gray-500 bg-gray-50 bg-opacity-40 border border-gray-200 focus:border-yellowGreen-500 rounded-lg outline-none ring ring-transparent focus:ring-yellowGreen-500 resize-none"
+            className="block py-2 px-4 w-full h-44 text-gray-600 placeholder-gray-600 bg-gray-50 bg-opacity-40 border border-gray-200 focus:border-blue-500 rounded-lg outline-none ring ring-transparent focus:ring-blue-500 resize-none"
             name="message"
             id="message"
-            placeholder="Enter your message"
+            placeholder="Digite sua mensagem aqui..."
             value={formData.message}
             onChange={handleInputChange}
           ></textarea>
         </div>
       </div>
-      <button className="group relative flex items-center justify-center px-5 h-12 w-full mb-8 text-base font-semibold text-white bg-gradient-to-br from-cyanGreen-800 to-cyan-800 rounded-lg transition-all duration-300" type="submit">
+      <button className="group relative flex items-center justify-center px-5 h-12 w-full mb-8 text-base font-semibold text-white bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg transition-all duration-300" type="submit">
         <div className="absolute top-0 left-0 w-full h-full rounded-lg ring ring-green-300 animate-pulse group-hover:ring-0 transition duration-300"></div>
         <span>Submit</span>
       </button>
-      <p className="text-sm text-gray-500">
-        <span className="mr-1">We process your information in accordance with our</span>
-        <a className="inline-block font-semibold text-yellowGreen-700 hover:text-yellowGreen-600" href="#">Privacy Policy</a>
+      <p className="text-sm text-gray-600">
+        <span className="mr-1">Nós processaremos suas informações de acordo com nossa</span>
+        <a className="inline-block font-semibold text-blue-600 hover:text-blue-500" href="#">Política de privacidade</a>
       </p>
     </form>
   );
