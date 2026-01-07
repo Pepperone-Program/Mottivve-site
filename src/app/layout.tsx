@@ -1,20 +1,34 @@
-// app/layout.tsx
-import type { Metadata, Viewport } from "next";
+// app/layout.jsx
 import Script from "next/script";
 import "./globals.css";
 
 /**
- * ✅ Recomendação:
- * - Defina no .env: NEXT_PUBLIC_SITE_URL e NEXT_PUBLIC_GA_ID
- * - Ex:
- *   NEXT_PUBLIC_SITE_URL=https://www.mottivve.com.br
- *   NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+ * ✅ Configure no .env:
+ * NEXT_PUBLIC_SITE_URL=https://www.mottivve.com.br
+ * NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+ *
+ * (Opcional)
+ * NEXT_PUBLIC_BRAND_PHONE=+55XXXXXXXXXXX
+ * NEXT_PUBLIC_BRAND_EMAIL=contato@mottivve.com.br
+ * NEXT_PUBLIC_INSTAGRAM_URL=https://instagram.com/mottivve
+ * NEXT_PUBLIC_FACEBOOK_URL=https://facebook.com/suapagina
+ * NEXT_PUBLIC_X_URL=https://x.com/suaconta
+ * NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/company/suaempresa
+ * NEXT_PUBLIC_YOUTUBE_URL=https://youtube.com/@seucanal
+ *
+ * (Opcional Search Console)
+ * NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=TOKEN
  */
 
 const siteName = "Mottivve";
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
-  "https://www.mottivve.com.br";
+  (process.env.NEXT_PUBLIC_SITE_URL || "https://www.mottivve.com.br").replace(
+    /\/$/,
+    ""
+  );
+
+// 🔥 Title agora com tamanho recomendado (50–60 chars aprox.)
+const defaultTitle = "Mottivve | Revendedor Oficial Bad Boy no Brasil";
 
 const siteDescription =
   "Mottivve: malas, mochilas, bolsas, garrafas, kimonos, equipamentos de luta e roupas. Revendedor oficial Bad Boy. Eleve sua presença com atitude e performance.";
@@ -22,20 +36,30 @@ const siteDescription =
 const ogImagePath = "/images/og-mottivve.jpg";
 const ogImage = `${siteUrl}${ogImagePath}`;
 
-const gaId = process.env.NEXT_PUBLIC_GA_ID; // ex: G-XXXXXXXXXX
+const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
-export const viewport: Viewport = {
+const instagramUrl =
+  process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://instagram.com/mottivve";
+const facebookUrl = process.env.NEXT_PUBLIC_FACEBOOK_URL;
+const xUrl = process.env.NEXT_PUBLIC_X_URL;
+const linkedinUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL;
+const youtubeUrl = process.env.NEXT_PUBLIC_YOUTUBE_URL;
+
+const brandPhone = process.env.NEXT_PUBLIC_BRAND_PHONE;
+const brandEmail = process.env.NEXT_PUBLIC_BRAND_EMAIL;
+
+export const viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: "#0B0B0C",
   colorScheme: "light",
 };
 
-export const metadata: Metadata = {
+export const metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: `${siteName} | Revendedor Oficial Bad Boy`,
+    default: defaultTitle,
     template: `%s | ${siteName}`,
   },
 
@@ -45,11 +69,12 @@ export const metadata: Metadata = {
     "Mottivve",
     "Bad Boy",
     "revendedor oficial Bad Boy",
-    "mala",
-    "mochila",
-    "bolsa",
-    "garrafa",
-    "kimono",
+    "Bad Boy Brasil",
+    "malas",
+    "mochilas",
+    "bolsas",
+    "garrafas",
+    "kimonos",
     "jiu-jitsu",
     "MMA",
     "fightwear",
@@ -64,7 +89,14 @@ export const metadata: Metadata = {
     "loja online",
   ],
 
-  alternates: { canonical: "/" },
+  // ✅ Canonical e hreflang
+  alternates: {
+    canonical: "/",
+    languages: {
+      "pt-BR": "/",
+      pt: "/", // opcional (ajuda auditorias)
+    },
+  },
 
   robots: {
     index: true,
@@ -88,7 +120,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: `${siteName} | Revendedor Oficial Bad Boy`,
+    title: defaultTitle,
     description: siteDescription,
     siteName,
     locale: "pt_BR",
@@ -104,9 +136,12 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: `${siteName} | Revendedor Oficial Bad Boy`,
+    title: defaultTitle,
     description: siteDescription,
     images: [ogImage],
+    // (Opcional) se tiver @:
+    // site: "@mottivve",
+    // creator: "@mottivve",
   },
 
   icons: {
@@ -116,22 +151,24 @@ export const metadata: Metadata = {
 
   manifest: "/site.webmanifest",
 
-  // Previne auto-link de telefone em iOS
-  other: { "format-detection": "telephone=no" },
+  other: {
+    "format-detection": "telephone=no",
+  },
 
-  // (Opcional) Quando você tiver:
-  // verification: { google: "TOKEN_SEARCH_CONSOLE" },
+  // ✅ Search Console (quando tiver)
+  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+    : undefined,
 };
 
-type JsonLdGraph = {
-  "@context": "https://schema.org";
-  "@graph": Array<Record<string, unknown>>;
-};
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // ✅ Lista social sem inventar links
+  const sameAs = [instagramUrl, facebookUrl, xUrl, linkedinUrl, youtubeUrl].filter(
+    Boolean
+  );
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
-  const jsonLd: JsonLdGraph = {
+  // ✅ JSON-LD melhorado
+  const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
@@ -141,10 +178,9 @@ export default function RootLayout({
         url: siteUrl,
         logo: `${siteUrl}/icon.png`,
         description: siteDescription,
-        sameAs: [
-          // "https://www.instagram.com/sua_conta",
-          // "https://www.tiktok.com/@sua_conta",
-        ],
+        sameAs,
+        ...(brandPhone ? { telephone: brandPhone } : {}),
+        ...(brandEmail ? { email: brandEmail } : {}),
       },
       {
         "@type": "WebSite",
@@ -163,11 +199,24 @@ export default function RootLayout({
         "@type": "WebPage",
         "@id": `${siteUrl}/#homepage`,
         url: siteUrl,
-        name: `${siteName} | Revendedor Oficial Bad Boy`,
+        name: defaultTitle,
         isPartOf: { "@id": `${siteUrl}/#website` },
         about: { "@id": `${siteUrl}/#organization` },
         inLanguage: "pt-BR",
         description: siteDescription,
+      },
+
+      // ✅ (Opcional) Store (sem inventar endereço)
+      // Se você colocar telefone/email já melhora auditoria local.
+      {
+        "@type": "Store",
+        "@id": `${siteUrl}/#store`,
+        name: siteName,
+        url: siteUrl,
+        image: ogImage,
+        parentOrganization: { "@id": `${siteUrl}/#organization` },
+        ...(brandPhone ? { telephone: brandPhone } : {}),
+        ...(brandEmail ? { email: brandEmail } : {}),
       },
     ],
   };
@@ -183,6 +232,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
+        {/* ✅ Ajuda auditorias a encontrarem sitemap/robots
+            (o "certo" é criar app/sitemap.ts e app/robots.ts) */}
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        <meta name="robots" content="index,follow,max-image-preview:large" />
+
         {/* ✅ Google Analytics (GA4) */}
         {gaId ? (
           <>
@@ -195,9 +249,18 @@ export default function RootLayout({
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
+
+                // Evita duplicar pageview com App Router
                 gtag('config', '${gaId}', {
                   anonymize_ip: true,
+                  send_page_view: false
+                });
+
+                // Pageview inicial
+                gtag('event', 'page_view', {
                   page_path: window.location.pathname,
+                  page_location: window.location.href,
+                  page_title: document.title
                 });
               `}
             </Script>
